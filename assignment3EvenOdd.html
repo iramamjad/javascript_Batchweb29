@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>check even odd</title>
+  <style>
+    h1 {  
+          text-align: center;  
+          padding: 23px;  
+          background-color: rgb(235, 18, 180);  
+          color: rgb(15, 11, 11);  
+          } 
+          .formstyle  
+{  
+width: 400px;  
+height: 330px;  
+margin: auto;  
+border: 15px solid rgb(86, 121, 7); 
+background-color: rgb(197, 169, 223); 
+border-radius: 5px;  
+padding: 20px;  
+font-size: 29px;
+font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+font-feature-settings: "blwf";
+}  
+  </style>
+</head>
+<body>
+<h1>Check Even Or Odd</h1>
+<div class= "formstyle">  
+  <form name = "form1">
+<p>Type a whole number to know if it's even or odd:</p>
+<input id="userVal" type="text" value="">
+<br><br>
+
+<div id="click-me" onclick="evenOrOdd()">Get results</div>
+<div id="results"></div>
+
+</form> 
+</div> 
+<script>
+
+function evenOrOdd(){
+  var userInput = Number(document.getElementById("userVal").value);
+  if ((userInput % 2) == 0){
+    document.getElementById("results").textContent = "The Number is Even";
+  } else {
+    document.getElementById("results").textContent = "NaN";
+  }
+}
+
+</script>
+</body>
+</html>

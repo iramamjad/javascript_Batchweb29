@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>calculator practice</title>
+    <link rel="stylesheet" type="text/css" href="percentage calculator.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+    <section class="navbar">
+		<div class="calculator">
+			<h1>Calculator Practice</h1>
+        </div>
+    </section>
+    <br>
+    <section class="cal1">
+		<div class="cal2">
+			<h1>Percentage Calculator</h1>
+        
+            <form onsubmit="calculate(); return false;">
+
+                <label for="totalMarks">Total Mark</label>
+                <input type="number" min="1" required id="totalMarks" placeholder="Enter your total marks">
+                <br>
+        
+                <label for="marksObtained">Obtained Mark</label>
+                <input type="number" min="1" required id="marksObtained" placeholder="Enter your obtained marks">
+                <br>
+                <button type="submit">Calculate</button>
+            </form>
+        </div>
+        <div class="cal3">
+            <h1 id="result"></h1>
+        </div>
+       
+    </section>
+        <script>
+        function calculate() {
+
+            let totalMarks = document.querySelector("#totalMarks").value;
+            let marksObtained = document.querySelector("#marksObtained").value;
+            totalMarks = Number(totalMarks)
+            marksObtained = Number(marksObtained)
+            let result = marksObtained * 100 / totalMarks;
+            document.querySelector("#result").innerHTML = `you have got ${result}%`; 
+        }
+    </script>
+</body>
+</html>
